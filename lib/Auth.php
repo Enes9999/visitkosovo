@@ -35,6 +35,10 @@ class Auth {
     public static function login($data) {
         $db = new Database();
 
+        if(!isset($data['email']) || !isset($data['password'])) {
+            return false;            
+        }
+        
         $email = $data['email'];
         $password = $data['password'];
 

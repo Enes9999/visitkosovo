@@ -8,8 +8,16 @@ ini_set('sendmail_from', "artaamjeku@gmail.com");
 require_once "Database.php";
 
 class Contact {
+
+    /**
+     * @TODO This method needs to be tested and functionality must be verified!
+     */
     public static function send($data) {
         $db = new Database();
+
+        if(!isset($data['name']) || !isset($data['email']) || !isset($data['message'])) {
+            return false;            
+        }
 
         $name = $data['name'];
         $email = $data['email'];

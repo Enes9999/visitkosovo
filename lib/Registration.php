@@ -5,6 +5,10 @@ class Registration {
     public static function signup($data) {
         $db = new Database();
 
+        if(!isset($data['name']) || !isset($data['email']) || !isset($data['password'])) {
+            return false;            
+        }
+
         $name = $data['name'];
         $email = $data['email'];
         $password = $data['password'];
