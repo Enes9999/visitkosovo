@@ -14,7 +14,7 @@ class Contact {
      */
     public static function send($data) {
         $db = new Database();
-
+      
         if(!isset($data['name']) || !isset($data['email']) || !isset($data['message'])) {
             return false;            
         }

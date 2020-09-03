@@ -27,13 +27,12 @@ if(isset($_REQUEST['action'])) {
     </div>
 </div>
 <div class="contact-section">
-    <div class="inner-width" style="margin-top: -200px;">
-        <h1>Get in touch with us</h1>
+    <div class="inner-width" >
+        <h1 style="margin-top: 60px;">Get in touch with us</h1>
         <form action="contact.php?action=contact" method="post">
             <input type="text" class="name" placeholder="Your Name" name="name">
             <input type="email" class="email" placeholder="Your Email" name="email">
             <textarea rows="1" placeholder="Message" class="message" name="message"></textarea>
-
             <button name="submit" value="send">SUBMIT</button>
         </form>
     </div>

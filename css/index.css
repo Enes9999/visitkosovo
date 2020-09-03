@@ -276,28 +276,4 @@ input {
   width: 40px;
 }
 
-footer {
-  background-color: transparent;
-  color: #fff;
-  font-size: 14px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 999;
-  height: -5%;
-}
 
-footer p {
-  margin: 10px 0 0 0;
-  font-family: "DM Sans", sans-serif;
-}
-
-footer i {
-  color: red;
-}
-
-footer a {
-  color: #d9d9d9;
-  text-decoration: none;
-}
