@@ -38,53 +38,6 @@ body {
 .wrap {
   position: relative;
 }
-.slide {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-.slide1 {
-  background-image: url(https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/s960x960/96811141_3209422065787722_4525460186273415168_o.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=VS6sUEuA-zEAX83R2Ca&_nc_ht=scontent.fprx1-1.fna&_nc_tp=7&oh=c21883ce9fd218939bf1c0926382082c&oe=5EE7BEFA);
-}
-.slide2 {
-  background-image: url(https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-0/p640x640/57589824_2346873258709278_2850416060295806976_o.jpg?_nc_cat=111&_nc_sid=8024bb&_nc_ohc=nM2qzs67a2YAX9MrmN9&_nc_ht=scontent.fprx1-1.fna&_nc_tp=6&oh=610afcd8ec0952b5c2a71d3f389f6846&oe=5EE6CEF4);
-}
-.slide3 {
-  background-image: url(https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-0/p640x640/94707176_3164143340315595_1982189624000249856_o.jpg?_nc_cat=110&_nc_sid=dd9801&_nc_ohc=BE0aJmnW_OUAX_Hw8Lw&_nc_ht=scontent.fprx1-1.fna&_nc_tp=6&oh=198a5e3f9b1c0d7a6f333d51e2f5d28d&oe=5EE7A8EB);
-}
-.slide-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.slide-content span {
-  font-size: 5rem;
-  color: #fff;
-}
-.arrow {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  margin-top: -35px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-#arrow-left {
-  border-width: 30px 40px 30px 0;
-  border-color: transparent #fff transparent transparent;
-  left: 0;
-  margin-left: 30px;
-}
-#arrow-right {
-  border-width: 30px 0 30px 40px;
-  border-color: transparent transparent transparent #fff;
-  right: 0;
-  margin-right: 30px;
-}
 .box {
   width: 100%;
   display: flex;
@@ -156,3 +109,25 @@ img {
     padding: 100px;
   }
 }
+
+
+/* slideri */
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  
+}
+.swiper-slide img{
+  width: 94%;
+  height: 94%;
+}
+
+/* slideri */
