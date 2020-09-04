@@ -1,93 +1,103 @@
-*{
-line-height:24px;
-color:#000;
-}.text-wrapper{
-
-height: 0;
-width:100%;
-font-family:'DM Sans',sans-serif;
+* {
+  line-height: 24px;
+  color: #000;
 }
-.text-wrapper h1,p{
-text-align:center;
-font-size:50px;
-
+.text-wrapper {
+  height: 0;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
 }
-.text-wrapper p{
-font-size:40px;
+.text-wrapper h1,
+p {
+  text-align: center;
+  font-size: 50px;
 }
-.nav-bar{
-margin:0 auto;
-width:980px;
-text-align:right;
-font-weight:700;
-margin-top:20px;
-margin-bottom:30px;
-height:100%;
+.text-wrapper p {
+  font-size: 40px;
 }
-.nav-bar ul{
-list-style-type:none;
+.nav-bar {
+  margin: 0 auto;
+  width: 980px;
+  text-align: right;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  height: 100%;
 }
-.nav-bar ul li{
-display:inline-flex;
-margin-left:20px;
-margin-right:20px;
+.nav-bar ul {
+  list-style-type: none;
 }
-.contact-section{
-text-align:center;
-font-family:'DM Sans',sans-serif;
+.nav-bar ul li {
+  display: inline-flex;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.inner-width{
-max-width:600px;
-margin:auto;
-padding:0 20px;
-font-family:'DM Sans',sans-serif;
+.contact-section {
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
 }
-.contact-section h1{
-font-size:20px;
-color:#000;
-margin-bottom:40px;
-text-transform:uppercase;
-letter-spacing:4px;
-font-weight:700;
-font-family:'DM Sans',sans-serif;
+.inner-width {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 20px;
+  font-family: "DM Sans", sans-serif;
 }
-.email,.message,.name{
-background:0 0;
-border:none;
-outline:0;
-border-bottom:1px solid;
-color:#000;
-font-size:16px;
-margin-bottom:40px;
-}.name{
-float:left;
-width:270px;
-font-family:'DM Sans',sans-serif;
-}.email{
-float:right;
-width:270px;
-font-family:'DM Sans',sans-serif;
-color:#000;
-}.message{
-min-width:100%;
-max-width:100%;
-font-family:'DM Sans',sans-serif;
-}.contact-section button{
-background:0 0;
-color:#70a1ff;
-border:1px solid #70a1ff;
-padding:12px 40px;
-border-radius:8px;
-text-transform:uppercase;
-font-size:16px;
-transition:.4s linear;
-cursor:pointer;
-font-family:'DM Sans',sans-serif;
-}.contact-section button:hover{
-background:#70a1ff;
-color:#fff;
-}@media screen and (max-width:600px){
-  .email,.name{
-  width:100%
- }
+.contact-section h1 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+}
+.email,
+.message,
+.name,
+.number {
+  background: 0 0;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+.name {
+  float: left;
+  width: 270px;
+  font-family: "DM Sans", sans-serif;
+}
+.email {
+  float: right;
+  width: 270px;
+  font-family: "DM Sans", sans-serif;
+  color: #000;
+}
+.message {
+  min-width: 100%;
+  max-width: 100%;
+  font-family: "DM Sans", sans-serif;
+}
+.contact-section button {
+  background: 0 0;
+  color: #70a1ff;
+  border: 1px solid #70a1ff;
+  padding: 12px 40px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: 0.4s linear;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+.contact-section button:hover {
+  background: #70a1ff;
+  color: #fff;
+}
+@media screen and (max-width: 600px) {
+  .email,
+  .name {
+    width: 100%;
+  }
 }

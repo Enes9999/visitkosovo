@@ -7,7 +7,7 @@ if(isset($_REQUEST['action'])) {
 	switch($_REQUEST['action']) {
 		case 'contact':
 			require_once "./lib/Contact.php"; 
-			$valid = Contact::send($_POST);
+			$valid = Contact::create($_POST);
 			if(!$valid) {
 				$error = 'Contact failed.';
 			}
@@ -27,13 +27,19 @@ if(isset($_REQUEST['action'])) {
     </div>
 </div>
 <div class="contact-section">
-    <div class="inner-width" >
+    <div class="inner-width">
         <h1 style="margin-top: 60px;">Get in touch with us</h1>
-        <form action="contact.php?action=contact" method="post">
-            <input type="text" class="name" placeholder="Your Name" name="name">
-            <input type="email" class="email" placeholder="Your Email" name="email">
-            <textarea rows="1" placeholder="Message" class="message" name="message"></textarea>
-            <button name="submit" value="send">SUBMIT</button>
+
+        <form name="forma" method="POST" action="contact.php?action=contact" onsubmit="return validate(event)">
+            <div class="fields">
+                <input type="text" placeholder="Name" class="name" id="name" name="name">
+                <input type="email" placeholder="Your Email" class="email" id="email" name="email">
+                <input type="phone" placeholder="Phone Number" class="number" id="number" name="phone">
+
+                <textarea type="text" rows="1" placeholder="Message" class="message" id="msg" name="message"></textarea>
+            </div>
+
+            <button type="submit" id="send" value="Send" name="submit">SUBMIT</button>
         </form>
     </div>
 </div>
