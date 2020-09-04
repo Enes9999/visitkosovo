@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 03, 2020 at 09:39 PM
+-- Generation Time: Sep 04, 2020 at 07:14 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.31
 
@@ -31,7 +31,29 @@ CREATE TABLE `contacts` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `phone` varchar(30) NOT NULL,
   `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `message`) VALUES
+(1, 'wqfqe', 'wfewf@asdfsf.com', '', 'qwfqwef');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `places`
+--
+
+CREATE TABLE `places` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `description` text NOT NULL,
+  `photo` varchar(255) NOT NULL,
+  `created_by` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -68,6 +90,12 @@ ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `places`
+--
+ALTER TABLE `places`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -81,6 +109,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `places`
+--
+ALTER TABLE `places`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

@@ -1,5 +1,5 @@
 <?php 
-$page = 'things';
+$page = 'places';
 require_once "./header.php";
 ?>
 <h1
