@@ -1,47 +1,42 @@
-<?php 
-$page = 'contact';
-require_once "./header.php";
+<?php
 
-$error = false;
-if(isset($_REQUEST['action'])) {
-	switch($_REQUEST['action']) {
-		case 'contact':
-			require_once "./lib/Contact.php"; 
-			$valid = Contact::send($_POST);
-			if(!$valid) {
-				$error = 'Contact failed.';
-			}
-		break;
-	}		 
+session_start();
+
+if(isset($_SESSION['contactus'])){
+    header("Location: HomePage.php");
+
+    //beje kete veprim nese eshte i loguar user
 }
-?>
 
-<div
-    style="margin-top: -150px; margin-bottom: -50px; background:url( https://ceed-global.org/wp-content/uploads/2020/03/Kosovo.png); height: 500px; max-width: 100%;">
-    <div>
-        <div class="text-wrapper"
-            style=" flex-wrap: wrap;  margin-top: 200px;  margin-bottom: -250px; width: 100%; height: 75vh; padding-top: 40px;">
-            <h1 style="color: white; line-height: 50px; margin-bottom: 100px;">Have any questions for us? </h1>
-            <p style="color: white; margin: 0 auto;">Write them down below.</p>
-        </div>
-    </div>
-</div>
-<div class="contact-section">
-    <div class="inner-width" >
-        <h1 style="margin-top: 60px;">Get in touch with us</h1>
-       <form name="forma" method="POST" action="lib\Contact.php" onsubmit="return validate(event)">
-            <div class="fields">
-                <input type="text" placeholder="Name" class="field" id="name" name="emri">
-                <div class="error" id="e1"></div>
-                <input type="text" placeholder="Email" class="field" id="email" name="email">
-                <div class="error" id="e2"></div>
-                <input type="tel" placeholder="Phone Number" class="field" id="number" name="numri">
-                <input type="text" placeholder="Message" class="field" id="msg" name="msg">
-            </div>
-            <input type="submit" id="send" value="Send ►" name="submit">
-        </form>
+require 'CRUD/includes/dbconnect.php';
+//lidhja me databaze
 
-    </div>
-</div>
+if(isset($_POST['submit'])){
+    $emri = $_POST['emri'];
+    $email = $_POST['email'];
+    $numri = $_POST['numri'];
+    $msg = $_POST['msg'];
+    $message = '';
+    $sql = 'INSERT INTO contactus (emri, email, numri, msg) VALUES (:emri, :email, :numri, :msg)';
+    //kete e bojme sepse te lidhja e kemi perdor pdo 
+    $query = $pdo->prepare($sql);
+    //kete e bojme qe mos me ja leju dikujt qe ne vend te imelles me shkru emrin e kshtu me radhe
+    $query->bindParam('emri', $emri);
+    $query->bindParam('email', $email);
+    $query->bindParam('numri', $numri);
+    $query->bindParam('msg', $msg);
+    //ekzekutimi i query
+   if($query->execute()){
+    header("Location: ContactUs.php");
+   }else{
+       $message = "Ka probleme gjate regjistrimit ";
+   }
 
-<?php require_once "./footer.php"; ?>
+   }    
+   ?>
+
+   <?php if(!empty($message)){
+       echo $message;
+   }
+
+   ?>
