@@ -23,6 +23,7 @@ $contacts = Dashboard::getContacts();
             <th>Email</th>
             <th>Phone</th>
             <th>Message</th>
+            
         <tr>
 
             <?php foreach($contacts as $contact): ?>

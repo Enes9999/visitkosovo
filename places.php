@@ -16,6 +16,8 @@ if(isset($_REQUEST['action'])) {
 }
 
 ?>
+
+
 <h1
     style="font-family: 'Mansalva', cursive; text-align: center; font-size: 40px; margin-top: 50px; margin-bottom: 50px; line-height: 40px;">
     There are many wonderful places waiting for you in Kosovo...
