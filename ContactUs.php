@@ -24,7 +24,7 @@ require_once "./header.php"; ?>
                 
                 <input type="text" placeholder="Your Email" class="email" id="email" name="email">
                 
-                <input type="tel" placeholder="Phone Number" class="number" id="number" name="numri">.
+                <input type="tel" placeholder="Phone Number" class="number" id="number" name="numri">
                 
 
                 <textarea type="text" rows="1" placeholder="Message" class="message" id="msg" name="msg"></textarea>

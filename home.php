@@ -18,29 +18,27 @@ require_once "./header.php";
 }
 </style>
 
-
-<div class="wrap">
-    <div id="arrow-left" class="arrow"></div>
-    <div id="slider">
-        <div class="slide slide1">
-            <div class="slide-content">
-                <span>Visit Kosovo</span>
-            </div>
-        </div>
-        <div class="slide slide2">
-            <div class="slide-content">
-                <span>Visit Kosovo</span>
-            </div>
-        </div>
-        <div class="slide slide3">
-            <div class="slide-content">
-                <span>Visit Kosovo</span>
-            </div>
-        </div>
+<!-- slideri -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://wallpapercave.com/wp/wp2020983.jpg">
+      </div>
+      <div class="swiper-slide">
+        <img src="images\kosovolandscape.png">
+      </div>
+      <div class="swiper-slide">
+        <img src="images\kosovo10.jpg">
+      </div>
     </div>
-    <div id="arrow-right" class="arrow"></div>
-</div>
-</div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination" style="padding-top:2000px;"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+<!-- sideri -->
 <h1 style="text-align: center; font-family: 'Mansalva',cursive; font-weight: 300; font-size: 50px; margin-top: 60px; ">
     Welcome to Kosovo</h1>
 <h2 style="text-align: center; font-family: 'DM Sans', sans-serif; font-size: 20px;"> Useful information to visit

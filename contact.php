@@ -8,7 +8,7 @@ if(isset($_SESSION['contactus'])){
     //beje kete veprim nese eshte i loguar user
 }
 
-require 'CRUD/includes/dbconnect.php';
+require 'Crud\includes\dbconnect.php';
 //lidhja me databaze
 
 if(isset($_POST['submit'])){
