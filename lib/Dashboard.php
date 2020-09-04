@@ -12,4 +12,12 @@ class Dashboard {
 
         return $contacts;
     }
+     public static function getPlaces() {
+        $db = new Database();
+
+        $sql = "SELECT * FROM places;";
+        $places = $db->find($sql);
+
+        return $places;
+    }
 }

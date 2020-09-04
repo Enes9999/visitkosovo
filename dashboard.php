@@ -10,31 +10,58 @@ if(!Auth::isAdmin()) {
 }
 
 $contacts = Dashboard::getContacts();
-
+$places = Dashboard::getPlaces();
 ?>
 
-<h1>Admin Dashboard</h1>
+
+
+<h1 id="dashboard-text">Admin Dashboard</h1>
 
 <div class="container">
-
-    <table>
+  <h1 class="dashboard-h1"> Contact details </h1>
+    <table class="table-1">
         <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Message</th>
-            
+
+            <th class="rows">Name</th>
+            <th class="rows">Email</th>
+            <th class="rows">Phone</th>
+            <th class="rows">Message</th>
+
         <tr>
 
             <?php foreach($contacts as $contact): ?>
         <tr>
-            <td><?php echo $contact['name']; ?></td>
-            <td><?php echo $contact['email']; ?></td>
-            <td><?php echo $contact['phone']; ?></td>
-            <td><?php echo $contact['message']; ?></td>
+            <td class="table-data"><?php echo $contact['name']; ?></td>
+            <td class="table-data"><?php echo $contact['email']; ?></td>
+            <td class="table-data"><?php echo $contact['phone']; ?></td>
+            <td class="table-data"><?php echo $contact['message']; ?></td>
         <tr>
             <?php endforeach; ?>
     </table>
+
+
+
+<h1 class="dashboard-h1"> Places added </h1>
+    <table class="table-1">
+        <tr>
+
+            <th class="rows">Name</th>
+            <th class="rows">Description</th>
+            <th class="rows">Photo</th>
+            <th class="rows">Created by</th>
+
+        <tr>
+
+            <?php foreach($places as $place): ?>
+        <tr>
+            <td class="table-data"><?php echo $place['name']; ?></td>
+            <td class="table-data"><?php echo $place['description']; ?></td>
+            <td class="table-data"><?php echo $place['photo']; ?></td>
+            <td class="table-data"><?php echo $place['created_by']; ?></td>
+        <tr>
+            <?php endforeach; ?>
+    </table>
+
 
 </div>
 
