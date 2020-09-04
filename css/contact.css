@@ -1,11 +1,10 @@
 *{
 line-height:24px;
 color:#000;
+font-family:'DM Sans',sans-serif;
 }.text-wrapper{
-
 height: 0;
 width:100%;
-font-family:'DM Sans',sans-serif;
 }
 .text-wrapper h1,p{
 text-align:center;
@@ -23,9 +22,7 @@ font-weight:700;
 margin-top:20px;
 margin-bottom:30px;
 height:100%;
-}
-.nav-bar ul{
-list-style-type:none;
+font-family: 'DM Sans', sans-serif;
 }
 .nav-bar ul li{
 display:inline-flex;
@@ -49,7 +46,6 @@ margin-bottom:40px;
 text-transform:uppercase;
 letter-spacing:4px;
 font-weight:700;
-font-family:'DM Sans',sans-serif;
 }
 .email,.message,.name{
 background:0 0;
@@ -62,16 +58,13 @@ margin-bottom:40px;
 }.name{
 float:left;
 width:270px;
-font-family:'DM Sans',sans-serif;
 }.email{
 float:right;
 width:270px;
-font-family:'DM Sans',sans-serif;
 color:#000;
 }.message{
 min-width:100%;
 max-width:100%;
-font-family:'DM Sans',sans-serif;
 }.contact-section button{
 background:0 0;
 color:#70a1ff;
@@ -82,7 +75,6 @@ text-transform:uppercase;
 font-size:16px;
 transition:.4s linear;
 cursor:pointer;
-font-family:'DM Sans',sans-serif;
 }.contact-section button:hover{
 background:#70a1ff;
 color:#fff;

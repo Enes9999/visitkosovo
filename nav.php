@@ -1,5 +1,5 @@
 <div class="container-1">
-    <div class="nav-bar">
+    <div class="nav-bar" style="font-family: 'DM Sans', sans-serif; ">
         <ul>
             <li> <a href="home.php"> Home </a></li>
             <li> <a href="things.php"> Places to visit </a></li>

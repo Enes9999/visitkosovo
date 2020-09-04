@@ -1,39 +1,44 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
 
-ini_set('SMTP', "smtp.gmail.com");
-ini_set('smtp_port', "587");
-ini_set('sendmail_from', "artaamjeku@gmail.com");
+session_start();
 
-require_once "Database.php";
+if(isset($_SESSION['contactus'])){
+    header("Location: index.php");
 
-class Contact {
-
-    /**
-     * @TODO This method needs to be tested and functionality must be verified!
-     */
-    public static function send($data) {
-        $db = new Database();
-      
-        if(!isset($data['name']) || !isset($data['email']) || !isset($data['message'])) {
-            return false;            
-        }
-
-        $name = $data['name'];
-        $email = $data['email'];
-        $message = $data['message'];
-
-        $sql = "INSERT INTO contacts (name, email, message) VALUES ('" . $name. "', '" . $email.  "','" . $message.");";
-        $result = $db->query($sql);
-        if($result) {
-            $toEmail = "am44339@ubt-uni.net";
-            $mailHeaders = "From: " . $name . "<". $email .">\r\n";
-            if(mail($toEmail, $message, $mailHeaders)) {
-                $message = "Your contact information is received successfully.";
-                $type = "success";
-            }            
-        }
-
-        return $result;
-    }
+    //beje kete veprim nese eshte i loguar user
 }
+
+require 'CRUD/includes/dbconnect.php';
+//lidhja me databaze
+
+if(isset($_POST['submit'])){
+    $emri = $_POST['emri'];
+    $email = $_POST['email'];
+    $numri = $_POST['numri'];
+    $msg = $_POST['msg'];
+    $message = '';
+    $sql = 'INSERT INTO contactus (emri, email, numri, msg) VALUES (:emri, :email, :numri, :msg)';
+    //kete e bojme sepse te lidhja e kemi perdor pdo 
+    $query = $pdo->prepare($sql);
+    //kete e bojme qe mos me ja leju dikujt qe ne vend te imelles me shkru emrin e kshtu me radhe
+    $query->bindParam('emri', $emri);
+    $query->bindParam('email', $email);
+    $query->bindParam('numri', $numri);
+    $query->bindParam('msg', $msg);
+    //ekzekutimi i query
+   if($query->execute()){
+    header("Location: contact.php");
+   }else{
+       $message = "Ka probleme gjate regjistrimit ";
+   }
+
+   }    
+   ?>
+
+   <?php if(!empty($message)){
+      
+
+ echo $message;
+   }
+
+   ?>

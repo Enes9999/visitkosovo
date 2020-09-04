@@ -29,12 +29,18 @@ if(isset($_REQUEST['action'])) {
 <div class="contact-section">
     <div class="inner-width" >
         <h1 style="margin-top: 60px;">Get in touch with us</h1>
-        <form action="contact.php?action=contact" method="post">
-            <input type="text" class="name" placeholder="Your Name" name="name">
-            <input type="email" class="email" placeholder="Your Email" name="email">
-            <textarea rows="1" placeholder="Message" class="message" name="message"></textarea>
-            <button name="submit" value="send">SUBMIT</button>
+       <form name="forma" method="POST" action="lib\Contact.php" onsubmit="return validate(event)">
+            <div class="fields">
+                <input type="text" placeholder="Name" class="field" id="name" name="emri">
+                <div class="error" id="e1"></div>
+                <input type="text" placeholder="Email" class="field" id="email" name="email">
+                <div class="error" id="e2"></div>
+                <input type="tel" placeholder="Phone Number" class="field" id="number" name="numri">
+                <input type="text" placeholder="Message" class="field" id="msg" name="msg">
+            </div>
+            <input type="submit" id="send" value="Send ►" name="submit">
         </form>
+
     </div>
 </div>
 
