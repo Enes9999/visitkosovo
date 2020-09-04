@@ -51,7 +51,7 @@ letter-spacing:4px;
 font-weight:700;
 font-family:'DM Sans',sans-serif;
 }
-.email,.message,.name{
+.email,.message,.name, .number{
 background:0 0;
 border:none;
 outline:0;
