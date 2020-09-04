@@ -1,6 +1,20 @@
 <?php 
 $page = 'places';
 require_once "./header.php";
+
+$error = false;
+if(isset($_REQUEST['action'])) {
+	switch($_REQUEST['action']) {
+		case 'create':
+			require_once "./lib/Places.php"; 
+			$valid = Places::create($_POST);
+			if(!$valid) {
+				$error = 'Places failed.';
+			}
+		break;
+	}		 
+}
+
 ?>
 <h1
     style="font-family: 'Mansalva', cursive; text-align: center; font-size: 40px; margin-top: 50px; margin-bottom: 50px; line-height: 40px;">
