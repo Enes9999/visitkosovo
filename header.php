@@ -8,7 +8,7 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/<?php echo $page; ?>.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
-    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
