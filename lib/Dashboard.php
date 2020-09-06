@@ -12,6 +12,7 @@ class Dashboard {
 
         return $contacts;
     }
+    
      public static function getPlaces() {
         $db = new Database();
 

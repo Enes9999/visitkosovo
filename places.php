@@ -5,7 +5,7 @@ require_once "./header.php";
 $error = false;
 if(isset($_REQUEST['action'])) {
 	switch($_REQUEST['action']) {
-		case 'create':
+		case 'places':
 			require_once "./lib/Places.php"; 
 			$valid = Places::create($_POST);
 			if(!$valid) {
