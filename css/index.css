@@ -1,133 +1,159 @@
 * {
-  font-size: 16px;
-  line-height: 24px;
-  color: #000;
-  text-decoration: none;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+	text-decoration: none;
 }
 .nav-bar {
-  margin: 0 auto;
-  width: 980px;
-  text-align: right;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  height: 100%;
-  font-family: "DM Sans", sans-serif;
+	margin: 0 auto;
+	width: 980px;
+	text-align: right;
+	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	height: 100%;
+	font-family: "DM Sans", sans-serif;
 }
 .nav-bar ul {
-  list-style-type: none;
+	list-style-type: none;
 }
 .nav-bar li {
-  display: inline;
-  padding-left: 20px;
-  padding-right: 20px;
-}body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 700;
+	display: inline;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: 700;
 }
 .box {
-  width: 100%;
-  display: flex;
-  padding: 40px;
-  text-align: center;
+	width: 100%;
+	display: flex;
+	padding: 40px;
+	text-align: center;
 }
 .box h3 {
-  color: #000;
-  font-size: 25px;
+	color: #000;
+	font-size: 25px;
 }
 #box-1,
 #box-2,
 #box-3 {
-  flex: 1;
-  margin-left: -40px;
-  padding: 30px;
+	flex: 1;
+	margin-left: -40px;
+	padding: 30px;
 }
-.boxes p, h3 {
-  color: grey;
-  font-family: "DM Sans", sans-serif;
+.boxes p,
+h3 {
+	color: grey;
+	font-family: "DM Sans", sans-serif;
 }
 img {
-  position: relative;
-  height: 200px;
-  margin-top: -30px;
+	position: relative;
+	height: 200px;
+	margin-top: -30px;
 }
 .icons {
-  width: 80px;
-  height: 80px;
+	width: 80px;
+	height: 80px;
 }
 @media (min-width: 488px) {
-  .container-2,
-  .box {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .container-2 div,
-  .box div {
-    padding: 100px;
-  }
+	.container-2,
+	.box {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.container-2 div,
+	.box div {
+		padding: 100px;
+	}
 }
 
 /* slideri */
 
 .swiper-container {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  margin-bottom: 30px;
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	margin-bottom: 30px;
 }
 .swiper-slide img {
-  width: 94%;
-  height: 94%;
+	width: 94%;
+	height: 94%;
 }
-
 
 /* dashboardi */
 .table-1 {
-  padding-left: 100px;
-  padding-right: 100px;
-  margin: 0 auto;
-  border: 1px solid black;
-  border-collapse: collapse;
-  
-}#dashboard-text{
-  padding-left: 100px;
-  padding-right: 100px;
-  text-align: center;
-  margin-bottom: 30px;
-  margin-top: 80px;
-  font-size: 30px;
-}.rows{
-  padding-left: 100px;
-  padding-right: 100px;
-  border: 1px solid black;
-  font-weight: bolder;
-  background-color: yellow;
-  color: #990000;
-  
-}.table-data{
-  padding-left: 100px;
-  padding-right: 100px;
-  border: 1px solid black;
- 
-}.dashboard-h1{
-  padding-left: 100px;
-  padding-right: 100px;
-  margin-top: 100px;
-  font-size: 22px;
-  text-align: center;
-}footer{
-  padding-left: 100px;
-  padding-right: 100px;
-  margin-top: 100px;
+	padding-left: 100px;
+	padding-right: 100px;
+	margin: 0 auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+#dashboard-text {
+	padding-left: 100px;
+	padding-right: 100px;
+	text-align: center;
+	margin-bottom: 30px;
+	margin-top: 80px;
+	font-size: 30px;
+}
+.rows {
+	padding-left: 100px;
+	padding-right: 100px;
+	border: 1px solid black;
+	font-weight: bolder;
+	background-color: yellow;
+	color: #990000;
+}
+.table-data {
+	text-align: center;
+	border: 1px solid black;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.table-data img {
+	position: initial;
+	margin: 0;
+	margin-top: 10px;
+	height: initial;
+}
+
+.table-data > a {
+	position: initial;
+	background: #444;
+	color: #fff;
+	border: 1px solid #333;
+	padding: 3px;
+	padding-left: 13px;
+	padding-right: 13px;
+	border-radius: 6px;
+	text-transform: uppercase;
+	font-size: 16px;
+	transition: 0.4s linear;
+	cursor: pointer;
+}
+
+.dashboard-h1 {
+	padding-left: 100px;
+	padding-right: 100px;
+	margin-top: 100px;
+	font-size: 22px;
+	text-align: center;
+}
+footer {
+	padding-left: 100px;
+	padding-right: 100px;
+	margin-top: 100px;
 }

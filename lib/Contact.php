@@ -24,4 +24,17 @@ class Contact {
 
         return $result;
     }
+
+    
+    /**
+     * Deletes specific Contact by ID
+     */
+    public static function delete($id) {
+        $db = new Database();
+
+        $sql = "DELETE FROM contacts WHERE id = {$id}";
+        $result = $db->query($sql);
+
+        return $result;
+    }
 }

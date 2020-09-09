@@ -6,9 +6,9 @@ require_once "./lib/Dashboard.php";
 $error = false;
 if(isset($_REQUEST['action'])) {
 	switch($_REQUEST['action']) {
-		case 'places':
-			require_once "./lib/Places.php"; 
-			$valid = Places::create($_POST);
+		case 'create':
+			require_once "./lib/Place.php"; 
+			$valid = Place::create($_POST);
 			if(!$valid) {
 				$error = 'Places failed.';
 			}
@@ -48,8 +48,7 @@ $places = Dashboard::getPlaces();
 
 .name,
 .description,
-.photo,
-.your_name {
+.photo {
     background: 0 0;
     border: none;
     outline: 0;
@@ -75,11 +74,6 @@ $places = Dashboard::getPlaces();
 .photo {
     min-width: 100%;
     max-width: 100%;
-}
-
-.your_name {
-    float: left;
-    width: 100%;
 }
 
 .contact-section button {
@@ -144,12 +138,11 @@ $places = Dashboard::getPlaces();
 <div class="contact-section" style="margin-bottom: 100px;">
     <div class="inner-width">
         <h1 style="margin-top: 60px;">Have any recommendations? Let us know.</h1>
-        <form name="forma" method="POST" action="places.php?action=places" onsubmit="return validate(event)">
+        <form name="forma" method="POST" action="places.php?action=create" onsubmit="return validate(event)">
             <div class="fields">
                 <input type="text" placeholder="Name of the place" class="name" id="name" name="name">
 
                 <input type="photo" placeholder="Photo" class="photo" id="photo" name="photo">
-                <input type="text" placeholder="Your Name" class="your_name" id="your_name" name="your_name">
                 <textarea type="text" rows="3" placeholder="Description" class="description" id="description"
                     name="description"></textarea>
             </div>

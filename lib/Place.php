@@ -3,7 +3,7 @@
 require_once "Auth.php";
 require_once "Database.php";
 
-class Places {
+class Place {
 
     /**
      * 
@@ -27,4 +27,17 @@ class Places {
 
         return $result;
     }
+
+    /**
+     * Deletes specific Place by ID
+     */
+    public static function delete($id) {
+        $db = new Database();
+
+        $sql = "DELETE FROM places WHERE id = {$id}";
+        $result = $db->query($sql);
+
+        return $result;
+    }
+
 }
