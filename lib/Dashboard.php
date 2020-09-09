@@ -21,4 +21,13 @@ class Dashboard {
 
         return $places;
     }
+
+    public static function getUsers() {
+        $db = new Database();
+
+        $sql = "SELECT * FROM users;";
+        $places = $db->find($sql);
+
+        return $places;
+    }
 }

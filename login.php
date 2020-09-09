@@ -36,34 +36,43 @@ require_once "./header.php";
 <h2>Sign up or log in to receive the latest news</h2>
 <div class="container" id="container">
     <div class="form-container sign-up-container">
-        <form action="login.php?action=signup" method="post">
+        <form action="login.php?action=signup" method="post" onsubmit="return validate(event)" name="forma">
             <h1>Create Account</h1>
             <div class="social-container">
-                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social"></a>
+                <a href="#" class="social"></a>
+                <a href="#" class="social"></a>
             </div>
             <span>or use your email for registration</span>
             <input type="text" name="name" placeholder="Name" />
+            <div class="error" id="e1"></div>
             <input type="email" name="email" placeholder="Email" />
+            <div class="error" id="e2"></div>
             <input type="password" name="password" placeholder="Password" />
-            <input type="submit" id="login-btn" value="Sing up" />
+            <div class="error" id="e3"></div>
+            <input type="submit" id="login-btn" value="Sing up" name="submit" />
         </form>
+
+       
+
     </div>
     <div class="form-container sign-in-container">
-        <form action="login.php?action=login" method="POST">
+        <form action="login.php?action=login" method="POST" name="forma2" onsubmit="return validate1(event)">
             <h1>Sign in</h1>
             <div class="social-container">
-                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social"></a>
+                <a href="#" class="social"></a>
+                <a href="#" class="social"></a>
             </div>
             <span>or use your account</span>
-            <input type="text" name="email" placeholder="email" />
+            <input type="email" name="email" placeholder="email" />
+            <div class="error" id="e4"></div>
             <input type="password" name="password" placeholder="password" />
+            <div class="error" id="e5"></div>
             <a href="#">Forgot your password?</a>
-            <input type="submit" id="signup-btn" value="Login" />
+            <input type="submit" id="signup-btn" value="Login" name="submit" />
         </form>
+
     </div>
     <div class="overlay-container">
         <div class="overlay">
