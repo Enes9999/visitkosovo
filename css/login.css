@@ -4,49 +4,12 @@
   color: #000;
   text-decoration: none;
   font-family: "DM Sans", sans-serif;
+  margin: 0;
 
 }
-img {
-  position: relative;
-}
-.text-wrapper {
-  width: 100%;
-  position: relative;
-  margin-top: -40%;
-}
-.text-wrapper h1 {
-  text-align: center;
-  padding-top: 20px;
-  font-family: "DM Sans", sans-serif;
-  margin-top: 100px;
-  font-size: 50px;
-  color: #fff;
-}
-.text-wrapper p {
-  text-align: center;
-  font-family: "DM Sans", sans-serif;
-  margin-top: 50px;
-  font-size: 40px;
-  color: #fff;
-}
-.nav-bar {
-  margin: 0 auto;
-  width: 980px;
-  text-align: right;
-  font-weight: 700;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  height: 100%;
-  font-family: "DM Sans", sans-serif;
-}
-.nav-bar ul {
-  list-style-type: none;
-}
-.nav-bar li {
-  display: inline;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+
+
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 
 * {

@@ -17,16 +17,23 @@ var swiper = new Swiper('.swiper-container', {
 
 <script type="text/javascript" src="js/site.js"> </script>
 <script type="text/javascript" src="js/login.js"> </script>
+
+<!-- navbar -->
 <script>
 function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
 }
 </script>
+
+<!-- navbar -->
+
+
+
 
 <footer>
     <p id="footer" style="font-size: 14px;">
