@@ -33,6 +33,12 @@ require_once "./header.php";
 </div>
 <?php endif; ?>
 
+<style type="text/css">
+	.topnav{
+		margin-left: 20px;
+	}
+</style>
+
 <h2>Sign up or log in to receive the latest news</h2>
 <div class="container" id="container">
     <div class="form-container sign-up-container">
@@ -76,13 +82,13 @@ require_once "./header.php";
     </div>
     <div class="overlay-container">
         <div class="overlay">
-            <div class="overlay-panel overlay-left">
+            <div class="overlay-panel overlay-left" style="box-sizing: border-box;">
                 <h1 style="font-size: 40px;">Welcome Back!</h1>
                 <p>To keep connected with us please login with your personal info</p>
                 <button class="ghost" id="signIn">Sign In</button>
             </div>
-            <div class="overlay-panel overlay-right">
-                <h1 style="font-size: 40px;">Hello, Friend!</h1>
+            <div class="overlay-panel overlay-right"  style="box-sizing: border-box;">
+                <h1 style="font-size: 40px; ma">Hello, Friend!</h1>
                 <p>Enter your personal details and start journey with us</p>
                 <button class="ghost" id="signUp">Sign Up</button>
             </div>
