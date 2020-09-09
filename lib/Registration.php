@@ -3,7 +3,7 @@ require_once "Database.php";
 
 class Registration {
     public static function signup($data) {
-        $db = new Database();
+        $db = Database::getInstance();
 
         if(!isset($data['name']) || !isset($data['email']) || !isset($data['password'])) {
             return false;            

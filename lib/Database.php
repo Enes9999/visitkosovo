@@ -7,12 +7,27 @@ define("DB_DATABASE", "visitkosovo");
 
 class Database {
 
+    // DB Connection
     protected $db = null; 
+
+    // Object Instance
+    protected static $instance = null; 
+
 
     public function __construct() {
         $this->connect();
     }
-    
+
+    public static function getInstance() {
+        if(static::$instance !== null) {
+            return static::$instance;
+        }
+
+        static::$instance = new Database();
+        return static::$instance;
+    }
+
+
     protected function db()
     {
         return $this->connect();

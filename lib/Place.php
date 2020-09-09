@@ -9,7 +9,7 @@ class Place {
      * 
      */
     public static function create($data) {
-        $db = new Database();
+        $db = Database::getInstance();
 
         if(!isset($data['name']) || !isset($data['photo']) || !isset($data['description'])) {
             return false;            
@@ -32,7 +32,7 @@ class Place {
      * Deletes specific Place by ID
      */
     public static function delete($id) {
-        $db = new Database();
+        $db = Database::getInstance();
 
         $sql = "DELETE FROM places WHERE id = {$id}";
         $result = $db->query($sql);

@@ -33,7 +33,7 @@ class Auth {
      * process user authentication
      */
     public static function login($data) {
-        $db = new Database();
+        $db = Database::getInstance();
 
         if(!isset($data['email']) || !isset($data['password'])) {
             return false;            

@@ -8,7 +8,7 @@ class Contact {
      * 
      */
     public static function create($data) {
-        $db = new Database();
+        $db = Database::getInstance();
 
         if(!isset($data['name']) || !isset($data['email']) || !isset($data['message'])) {
             return false;            
@@ -30,7 +30,7 @@ class Contact {
      * Deletes specific Contact by ID
      */
     public static function delete($id) {
-        $db = new Database();
+        $db = Database::getInstance();
 
         $sql = "DELETE FROM contacts WHERE id = {$id}";
         $result = $db->query($sql);

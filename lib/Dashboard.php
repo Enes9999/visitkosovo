@@ -5,7 +5,7 @@ require_once 'Database.php';
 class Dashboard {
 
     public static function getContacts() {
-        $db = new Database();
+        $db = Database::getInstance();
 
         $sql = "SELECT * FROM contacts;";
         $contacts = $db->find($sql);
@@ -14,7 +14,7 @@ class Dashboard {
     }
     
     public static function getPlaces() {
-        $db = new Database();
+        $db = Database::getInstance();
 
         $sql = "SELECT * FROM places;";
         $places = $db->find($sql);
@@ -29,7 +29,7 @@ class Dashboard {
             return static::$users;
         }
 
-        $db = new Database();
+        $db = Database::getInstance();
 
         $sql = "SELECT * FROM users;";
         static::$users = $db->find($sql);
